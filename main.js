@@ -1,4 +1,8 @@
 const fs = require('fs');
+
+const dotenv = require('dotenv');
+dotenv.config();
+
 //require discord.js module
 const Discord = require('discord.js');
 //create new discord client
@@ -17,20 +21,31 @@ for (const file of commandFiles) {
 }
 
 //retrieve prefix from config file
-const { prefix, token } = require('./config.json');
+const { prefix } = require('./config.json');
 
 //log status when online
 client.once('ready', () => {
     console.log('CanWeBot is online!');
+    client.user.setActivity('Try !glock');
 });
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
-	const command = args.shift().toLowerCase();
+    const commandName = args.shift().toLowerCase();
+
+    if (!client.commands.has(commandName)) return;
+
+    const command = client.commands.get(commandName);
+
+    try {
+        command.execute(message, args);
+    } catch (error) {
+        // ...
+    }
 
 });
 
 //login using token
-client.login(token);
+client.login(process.env.TOKEN);
