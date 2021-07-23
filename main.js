@@ -26,7 +26,9 @@ const { prefix } = require('./config.json');
 //log status when online
 client.once('ready', () => {
     console.log('CanWeBot is online!');
-    client.user.setActivity('Try !glock');
+    client.user.setActivity('you.', {
+        type: "WATCHING"
+    });
 });
 
 client.on('message', message => {
@@ -43,7 +45,7 @@ client.on('message', message => {
         command.execute(message, args);
         console.log(`${message.author.username} ran ${prefix}${commandName}`);
     } catch (error) {
-        console.log("uh oh uwu there's been an ewwa")
+        message.reply("uh oh uwu there's been an ewwa, @lukellyk fix me pwease 🥺")
         console.log(error)
     }
 
