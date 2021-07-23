@@ -41,7 +41,7 @@ client.on('message', message => {
 
     try {
         command.execute(message, args);
-        console.log(`${message.author.username} ran !${commandName}`);
+        console.log(`${message.author.username} ran ${prefix}${commandName}`);
     } catch (error) {
         // ...
     }
