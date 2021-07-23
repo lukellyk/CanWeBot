@@ -4,6 +4,7 @@
   "description": "Brainlet bot that does as I please",
   "main": "main.js",
   "scripts": {
+    "go": "npm install & echo 'TOKEN=' >> .env",
     "start": "run-script-os",
     "start:default": "nodemon -x 'node main.js || touch main.js'",
     "start:windows": "nodemon main.js & echo 'The server will not restart itself automatically'"
