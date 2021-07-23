@@ -43,7 +43,8 @@ client.on('message', message => {
         command.execute(message, args);
         console.log(`${message.author.username} ran ${prefix}${commandName}`);
     } catch (error) {
-        // ...
+        console.log("uh oh uwu there's been an ewwa")
+        console.log(error)
     }
 
 });
