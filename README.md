@@ -4,7 +4,7 @@ The _offical_ bot of the DesComp students of The University of Sydney
 ## Setup for developing
 **Step 1:** Install [Node.js](https://nodejs.org/en/)
 
-**Step 2:** Open a terminal in the **root directory** and type `npm run go`
+**Step 2:** Open a terminal in the **root directory** and run `npm run go`
 
 **Step 3:** Retrieve token from me (Luke) and paste into .env file
 
