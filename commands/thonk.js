@@ -13,5 +13,6 @@ module.exports = {
                     .then(message => message.react('867753377119338538'))
                     .then(message => message.react('🤔'))
         ])
+        .catch(error => console.error('One of the emojis failed to react:', error));
 	},
 };
