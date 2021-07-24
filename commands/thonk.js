@@ -18,6 +18,9 @@ module.exports = {
                     console.error('One of the emojis failed to react:', error);
                 }
             })
-
+        
+        message.delete()
+            .then(msg => console.log(`Deleted command message from ${msg.author.username}`))
+            .catch(console.error);
 	}
 };
