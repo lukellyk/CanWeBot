@@ -1,3 +1,5 @@
+//cheems translation logic taken from https://cheems.mirazmac.com/
+
 module.exports = {
 	name: 'cheems',
 	description: 'makimg yuor temxt bemtter',
