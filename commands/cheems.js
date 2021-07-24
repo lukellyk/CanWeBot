@@ -12,7 +12,7 @@ module.exports = {
             .then(async message => {
                 try {
                     var english = message.content.toString();
-                    message.channel.send("\<:cheems:868383198130864138:>: " + englishToCheems(english));
+                    message.channel.send("<:cheems:868383198130864138>: " + englishToCheems(english));
                 } catch (error) {
                     console.error('Failemd to tramslamte: ', error);
                 }
@@ -27,7 +27,7 @@ module.exports = {
             console.log("Tramslatimg imput: ", args.join(" "));
 
             var english = args.join(" ").toString();
-            message.channel.send("\<:cheems:868383198130864138:>: " + englishToCheems(english));
+            message.channel.send("<:cheems:868383198130864138>: " + englishToCheems(english));
             
             message.delete()
                 .then(msg => console.log(`Deleted command message from ${msg.author.username}`))
