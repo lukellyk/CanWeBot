@@ -12,18 +12,26 @@ module.exports = {
             .then(async message => {
                 try {
                     var english = message.content.toString();
-                    message.channel.send(englishToCheems(english));
+                    message.channel.send(":cheems: " + englishToCheems(english));
                 } catch (error) {
                     console.error('Failemd to tramslamte: ', error);
                 }
             })
+            
+            message.delete()
+                .then(msg => console.log(`Deleted command message from ${msg.author.username}`))
+                .catch(console.error);
         } else 
         {
             // args is text to be translated
             console.log("Tramslatimg imput: ", args.join(" "));
 
             var english = args.join(" ").toString();
-            message.channel.send(englishToCheems(english));
+            message.channel.send(":cheems: " + englishToCheems(english));
+            
+            message.delete()
+                .then(msg => console.log(`Deleted command message from ${msg.author.username}`))
+                .catch(console.error);
         }
 
         // var holyWords = {
