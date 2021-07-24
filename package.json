@@ -4,8 +4,10 @@
   "description": "Brainlet bot that does as I please",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -x 'node main.js || touch main.js'"
+    "go": "npm install & echo 'TOKEN=' >> .env",
+    "start": "run-script-os",
+    "start:default": "nodemon -x 'node main.js || touch main.js'",
+    "start:windows": "nodemon main.js & echo 'The server will not restart itself automatically'"
   },
   "author": "Luke Kelly",
   "license": "ISC",
@@ -13,5 +15,8 @@
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
     "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "run-script-os": "^1.1.6"
   }
 }
