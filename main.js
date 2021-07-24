@@ -37,7 +37,11 @@ client.on('message', message => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
 
-    if (!client.commands.has(commandName)) return;
+    if (!client.commands.has(commandName)) {
+        message.reply(`Oopsie doopsie, I don't know **${prefix}${commandName}**  🥺`)
+        console.log(`${message.author.username} tried to run ${prefix}${commandName} but failed`)
+        return
+    };
 
     const command = client.commands.get(commandName);
 
