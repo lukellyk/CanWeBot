@@ -5,8 +5,7 @@
   "main": "main.js",
   "scripts": {
     "go": "npm install & echo 'TOKEN=' >> .env",
-    "start": "run-script-os",
-    "start:default": "nodemon -x 'node main.js || touch main.js'",
+    "start": "nodemon -x 'node main.js || touch main.js'",
     "start:windows": "nodemon main.js & echo 'The server will not restart itself automatically'"
   },
   "author": "Luke Kelly",
@@ -15,8 +14,5 @@
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
     "nodemon": "^2.0.12"
-  },
-  "devDependencies": {
-    "run-script-os": "^1.1.6"
   }
 }
