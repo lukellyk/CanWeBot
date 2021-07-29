@@ -11,7 +11,7 @@ module.exports = {
         message.member.voice.channel.join().then(VoiceConnection => {
             // Playing the music, and, on finish, disconnecting the bot.
             VoiceConnection.play("./assets/audio/fart.mp3").on("finish", () => VoiceConnection.disconnect());
-            message.reply("Playing...");
+            message.reply("Pushing one out for you x");
         }).catch(e => console.log(e))
     },
 };
