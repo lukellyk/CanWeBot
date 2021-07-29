@@ -131,7 +131,12 @@ module.exports = {
                     var prev = word.charAt(i - 1);
                     var next = word.charAt(i + 1);
 
-                    if (vowels.includes(char) && next != ('m' || 'M') && prev != ('m' || 'M') && !vowels.includes(next)) {
+                    if (vowels.includes(char) && 
+                            next != 'm' && 
+                            next != 'M' && 
+                            prev != 'm' && 
+                            prev != 'M' && 
+                            !vowels.includes(next)) {
                         char = char + /* Account for caps --> */(char == char.toUpperCase() ? 'M' : 'm');
 
                         addedM = true;
