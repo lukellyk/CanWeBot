@@ -1,5 +1,5 @@
 # CanWeBot
-The _offical_ bot of the DesComp students of The University of Sydney :trollface:
+The _official_ bot of the DesComp students of The University of Sydney :trollface:
 
 ## Setup for developing
 **Step 1:** Install [Node.js](https://nodejs.org/en/)
