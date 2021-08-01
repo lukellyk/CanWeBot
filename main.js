@@ -6,8 +6,7 @@ dotenv.config();
 //require discord.js module
 const Discord = require('discord.js');
 //create new discord client
-const myIntents = new Discord.Intents(Discord.Intents.ALL) //fuck you discord I have all the intents
-const client = new Discord.Client({ ws: { intents: myIntents } });
+const client = new Discord.Client();
 
 //load commands
 client.commands = new Discord.Collection();
