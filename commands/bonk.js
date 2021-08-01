@@ -12,9 +12,10 @@ module.exports = {
 	description: 'get bonked!',
 	async execute(message, args) {
         
-        if (MessageMentions.USERS_PATTERN.test(args)) {
-            victim = message.mentions.users.first();
+        if (victim = message.mentions.users.first()) {
+            // mentioned user WILL be the victim of a bonk
         } else {
+            // the message author will be bonked
             victim = message.author;
         }
         
