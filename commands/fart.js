@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'fart',
 	description: 'uh oh stinky!',
-	execute(message, args) {
+	execute(message) {
         // Checking if the message author is in a voice channel.
         if (!message.member.voice.channel) return message.reply("You must be in a voice channel.");
         // Checking if the bot is in a voice channel.
