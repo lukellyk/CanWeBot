@@ -5,14 +5,21 @@ dotenv.config();
 const {Client} = require("dagpijs");
 const cl = new Client(process.env.DAGPI_TOKEN)
 
-const { MessageAttachment } = require('discord.js')
+const { MessageAttachment, MessageMentions} = require('discord.js')
 
 module.exports = {
 	name: 'bonk',
 	description: 'get bonked!',
 	async execute(message, args) {
+        
+        if (MessageMentions.USERS_PATTERN.test(args)) {
+            victim = message.mentions.users.first();
+        } else {
+            victim = message.author;
+        }
+        
         //retrieve user's avatar as PNG
-        const url = message.author.displayAvatarURL().replace(".webp",".png");
+        const url = victim.displayAvatarURL().replace(".webp",".png");
         //call dagpi API
         const img = await cl.image_process("bonk", {url : url});
         //send gif response
