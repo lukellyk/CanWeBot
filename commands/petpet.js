@@ -10,6 +10,7 @@ const { MessageAttachment } = require('discord.js')
 module.exports = {
 	name: 'petpet',
 	description: 'mmmmm good boy',
+    usage: '[@user]',
 	async execute(message) {
         
         if (victim = message.mentions.users.first()) {

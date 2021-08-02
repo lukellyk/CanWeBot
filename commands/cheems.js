@@ -3,6 +3,7 @@
 module.exports = {
 	name: 'cheems',
 	description: 'makimg yuor temxt bemtter',
+    usage: '[message ID]',
 	execute(message, args) {
         
         if (/^[0-9]{18}$/.test(args[0])) 
