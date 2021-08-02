@@ -26,8 +26,8 @@ const { prefix } = require('./config.json');
 //log status when online
 client.once('ready', () => {
     console.log('CanWeBot is online!');
-    client.user.setActivity('you.', {
-        type: "WATCHING"
+    client.user.setActivity('!help', {
+        type: "PLAYING"
     });
 });
 

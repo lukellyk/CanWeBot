@@ -1,6 +1,7 @@
 module.exports = {
 	name: 'thonk',
 	description: 'But when you think about it...',
+    usage: '[message ID]',
 	execute(message, args) {
         
         message.channel.messages.fetch(args[0])
