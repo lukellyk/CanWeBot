@@ -57,7 +57,11 @@ module.exports = {
 	            OneUserEdit(commands.SWIRL, "png");
 	            break;
 
-	        default:
+			case undefined:
+				message.reply(`Available edits: ${Object.values(commands).join(", ")}`)
+				break;
+		
+			default:
 	            message.reply(`I didn't recognise "${args[0]}",  available edits: ${Object.values(commands).join(", ")}`)
 	            break;
 	    }
