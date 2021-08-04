@@ -10,6 +10,6 @@ The _official_ bot of the DesComp students of The University of Sydney :trollfac
 
 **Step 4:** Make sure no one else is running the bot (it will be offline in the test server)
 
-**Step 4:** run `npm start` (for MacOS and Linux) or `npm run start:windows` (for Windows) in terminal
+**Step 4:** Run `npm start` (for MacOS and Linux) or `npm run start:windows` (for Windows) in terminal
 
 **Step 5:** 'Develop' to your hearts content
