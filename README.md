@@ -6,7 +6,7 @@ The _official_ bot of the DesComp students of The University of Sydney :trollfac
 
 **Step 2:** Open a terminal in the **root directory** and run `npm run go`
 
-**Step 3:** Retrieve token from me (Luke) and paste into .env file
+**Step 3:** Retrieve token (for Discord and DagPi) from me (Luke) and paste into .env file
 
 **Step 4:** Make sure no one else is running the bot (it will be offline in the test server)
 
