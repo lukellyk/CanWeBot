@@ -65,6 +65,15 @@ module.exports = {
 	            message.reply(`I didn't recognise "${args[0]}",  available edits: ${Object.values(commands).join(", ")}`)
 	            break;
 	    }
+		
+		// here's your damn edge case @luke
+		function CheckOtherMentions(){
+			if (message.mentions.roles.size > 0 ||
+				message.mentions.everyone === true ||
+				message.mentions.channels.size > 0) {
+				message.reply("You can only mention users as part of this command. Other mentions will not be parsed.");
+			}
+		}
 
 	    // For edits that only need one user as input (either first mentioned user OR message author)
 	    async function OneUserEdit(command, extension) {
@@ -75,6 +84,7 @@ module.exports = {
 	            victim = message.author;
 	        }
 
+			CheckOtherMentions();
 	        //retrieve user's avatar as PNG
 	        const victimImageUrl = victim.displayAvatarURL().replace(".webp", ".png");
 	        //call dagpi API
@@ -112,6 +122,7 @@ module.exports = {
 	            return;
 	        }
 
+			CheckOtherMentions();
 	        //retrieve avatars as PNG
 	        const victimImageUrl = victim.displayAvatarURL().replace(".webp", ".png");
 	        const perpImageUrl = perpetrator.displayAvatarURL().replace(".webp", ".png");
