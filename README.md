@@ -1,3 +1,5 @@
+## DEPRECATED - Updates to the Discord API have made this bot no longer functional, maybe I'll get around to updating it some day
+
 # CanWeBot
 The _official_ bot of the DesComp students of The University of Sydney :trollface:
 
